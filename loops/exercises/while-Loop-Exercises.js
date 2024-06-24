@@ -15,7 +15,7 @@
 
 
 //b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
-  while(crew > 0 || crew <= 7){
+  while(crew <= 0 || crew >= 7){
     crew = input.question("Enter the amount of crew members aboard: ")
   }
   
@@ -31,6 +31,7 @@ while(fuel > 0){
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”
 
 If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”*/
+console.log(`The shuttle gained an altitude of ${altitude} km`)
 if(altitude >= 2000){
   console.log("Orbit achieved!")
 }
