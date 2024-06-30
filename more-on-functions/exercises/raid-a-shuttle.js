@@ -28,18 +28,31 @@ console.log("Hold status: " + holdStatus(cargoHold));
  */
  
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
-
+let nonSus = function(sus) {
+  if (checkFuel(sus) === 'green') {
+     return sus - 100001;
+  }
+  else if (checkFuel(sus) === 'yellow') {
+     return sus - 50001;
+  }
+  else {
+     return sus;
+  }
+};
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
 
 //c). Once you figure out how much fuel to pump out, return that value.
 
 //d). Decide where to best place your function call to gather our new fuel.
+console.log(nonSus(fuelLevel))
 
 /* Next, liberate some of that glorious cargo.
  */
 
 //a). Define another anonymous function with an array as a parameter, and set it equal to another innocent variable.
-
+let notStealing = function([]){
+    
+}
 //b). You need to swipe two items from the cargo hold. Choose well. Stealing water ain’t gonna get us rich. Put the swag into a new array and return it from the function.
 
 //c). The cargo hold has better security than the fuel tanks. It counts how many things are in storage. You need to replace what you steal with something worthless. The count MUST stay the same, or you’ll get caught and thrown into the LaunchCode brig.
