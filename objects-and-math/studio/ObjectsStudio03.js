@@ -1,8 +1,33 @@
 // Code your crewMass function here:
+let defaultMass = 75000
+
+function crewMass(array){
+  let mass = 0
+  
+  for(let i = 0; i < array.length; i++){
+    mass += array[i].mass
+  }
+  let totalMass = mass + defaultMass
+  return totalMass
+}
 
 
 // Code your fuelRequired function here:
+function fuelRequired(array){
+  let fuelRequired = 0
+  fuelRequired = Math.round((crewMass(array)/9.5)*10)/10
 
+  for(let i = 0; i < array.length; i++){
+    if(array[i].species === "dog" || array[i].species === "cat"){
+      fuelRequired += 200
+    }
+    else{
+      fuelRequired +=100
+    }
+  }
+  console.log(`The mission has a launch mass of ${crewMass(crew)} kg and requires ${fuelRequired} kg of fuel`)
+  return fuelRequired
+}
 
 // The pre-selected crew is in the array at the end of this file.
 // Feel free to add, remove, or switch crew members as you see fit.
@@ -51,4 +76,8 @@ let candidateA = {
  };
  
  let crew = [candidateB,candidateD,candidateF];
+ console.log(crewMass(crew))
+ console.log(fuelRequired(crew) + " fuel needed")
+
+
  
