@@ -23,6 +23,9 @@ class Manual extends Book{
         if(2024-copyright > 5){
             return discarded = true
         }
+        else{
+            return "Book is kept"
+        }
     }
 }
 
@@ -34,6 +37,9 @@ class Novel extends Book{
         if(2024-copyright > 5){
             return discarded = true
         }
+        else{
+            return "Book is kept"
+        }
     }
 }
 
@@ -42,5 +48,5 @@ let pride = new Novel("Pride and Prejudice", "Jane Austen", 1813, 1111111111111,
 let ship = new Manual("Top Secret Shuttle Building Manual", "Redacted", 2013, "0000000000000", 1147, 1, false)
 
 // Code exercises 4 & 5 here:
-console.log(pride.checkOut(5))
 console.log(pride.remove())
+console.log(ship.remove())
