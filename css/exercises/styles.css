@@ -1,1 +1,12 @@
-/* Start adding your styling below! */ 
+body {
+    background-color: blue;
+}
+
+p {
+    color: red;
+}
+
+h1 {
+    color: yellowgreen;
+    font-size: 36;
+}
